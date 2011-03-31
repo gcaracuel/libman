@@ -1,0 +1,218 @@
+/*---------MAIN STYLES---------*/
+
+* {
+border:0 none;
+margin:0;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:0;
+padding:0;
+}
+ul, li {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+body {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FFFFFF none repeat scroll 0 0;
+color:#C8C8C3;
+font-family:"ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Lucida Grande",Arial, Helvetica, sans-serif;
+font-size:12px;
+width:100%;
+}
+:focus {
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:0;
+}
+.clear:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+}
+* html .clear {
+height:1%;
+}
+.wrapper {
+margin:0 auto;
+width:850px;
+}
+a, .red {
+color:#4782AC;
+text-decoration:none;
+}
+a:hover {
+border-bottom:1px dotted;
+}
+h2 {
+color:#999999;
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia,Times,serif;
+font-size:18px;
+font-weight:normal;
+letter-spacing:1.7px;
+font-variant: small-caps;
+}
+h3 {
+color:#666666;
+font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2",sans-serif;
+font-size:13px;
+font-weight:bold;
+text-transform:uppercase;
+letter-spacing: 1px;
+padding-bottom: 20px;
+width:100%;
+}
+.left {
+display:inline;
+float:left;
+}
+.right {
+display:inline;
+float:right;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:80%;
+}
+
+#header {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../images/top.png) no-repeat scroll center top;
+border-top:8px solid #181818;
+height:120px;
+width:100%;
+}
+
+#nav {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(../images/top_underline.jpg) no-repeat scroll center bottom;
+margin:0 auto;
+padding:55px 0px 10px 85px;
+width:720px;
+}
+#nav li {
+font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia, Times, serif;
+color: #999999;
+font-style: italic;
+display:inline;
+float:left;
+font-size: 12px;
+margin:-5px 75px 0 0;
+}
+
+#nav li a {
+color:#333333;
+font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2","Lucida Grande",Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight:bold;
+text-transform: uppercase;
+font-size: 13px;
+letter-spacing: 1px;
+}
+
+#perspective {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:transparent url(./../images/perspective.png) repeat-x scroll center center;
+color:#333333;
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia,Times,serif;
+font-size:1.8em;
+height:148px;
+padding:48px 0 0;
+width:100%;
+}
+#perspective p {
+-webkit-text-size-adjust: none;
+font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia,Times,serif;
+line-height:1.5em;
+padding:5px 0 0;
+width:765px;
+}
+#perspective a {
+font-style:italic;
+}
+#main {
+float:left;
+margin:0 0 20px;
+width:550px;
+}
+#main p {
+-webkit-text-size-adjust: none;
+color:#666666;
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,Times,serif;
+font-size:14.5px;
+line-height:1.5em;
+margin:0 0 30px;
+}
+
+
+/*---------INDEX STYLES---------*/
+
+#bottom {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+clear:both;
+height:30px;
+margin:0 auto;
+width:160px;
+}
+#footer {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#111418 none repeat scroll 0 0;
+font-size: 13px;
+font-style: normal;
+clear:both;
+padding:40px 0 0;
+width:100%;
+position: absolute;
+bottom: 0px;
+}
+
+#footer .copy {
+-webkit-text-size-adjust: none;
+font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2","Lucida Grande",Arial, Helvetica, sans-serif;
+border-top:2px solid #2f2f2f;
+clear:both;
+color:#F4F4ED;
+display:block;
+font-size:13px;
+letter-spacing:0px;
+line-height: 1.5em;
+padding:18px 0px 18px 0px;
+text-transform:none;
+width:100%;
+}
+#footer a:hover{
+color: #FFF;
+border-bottom: none;
+}
+.quote {
+margin:0 0 15px;
+line-height: 1.5em;
+width:235px;
+}
+.source {
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia,Times,serif;
+font-style:italic;
+color: #FFFFCC;
+font-size: 11px;
+}
+
+#weekly {
+width:200px;
+}

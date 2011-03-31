@@ -2,20 +2,64 @@
 <html>
 <head>
   <title>Libman</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="Keywords" content="">    <!-- Terminar y hacerlo variable -->
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="header">
+	<div class="wrapper">
+	 	<div id="nav" class="clear">
+		<ul>
+			<li><a href="">Reservas</a><br>
+			<span>Ver mis compras</span></li>
+			<li><a href="">Novedades</a><br>
+			<span>Best sellers</span></li>
+			<li><a href="">Condiciones</a><br>
+			<span>Formas de pago</span></li>
+			<li><a href="">Contacto</a><br>
+			<span>Quienes somos</span></li>
+		</ul>
+		</div>
+	</div>
+</div>
+<div id="perspective" class="clear">
+	<div class="wrapper">
+		<h2>Notificaciones o anuncios interesantes para el usuario</h2>
+    <p>“Texto interesante, o anuncio hacia: <a href="http://papeleriakon-tiki.com/">página corporativa</a>, o bien hacia nuestra página en <a href="http://facebook.com/papkontiki">Facebook</a>.”</p>
+	  <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+</div>
+
 
 <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 
 <%= link_to "Sign in with Google", user_omniauth_authorize_path(:open_id, :openid_url => "https://www.google.com/accounts/o8/id") %>
 
+
 <%= yield %>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
+<div id="bottom"></div>
+<div id="footer">	
+  <div class="wrapper">
+    <div align="center">
+    <table class="copy">
+      <tr>
+        <td><a href="">Mapa del sitio</a></td>
+        <td width="50"></td>
+        <td><a href="">Feedback</a></td>
+        <td width="50"></td>
+        <td><a href="">Copyright</a></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+</div>
+</div>
+			 	       
 </body>
 </html>
