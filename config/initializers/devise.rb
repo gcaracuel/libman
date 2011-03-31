@@ -173,7 +173,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   #Facebook
-  config.omniauth :facebook, 'APP_ID', 'APP_SECRET'
+  config.omniauth :facebook, '101890666563578', '579463255a748cf9bbfd30120f0a879d'
   
   #OpenID
   require 'openid/store/filesystem'

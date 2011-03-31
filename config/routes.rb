@@ -1,11 +1,5 @@
 Libman::Application.routes.draw do
   
-  root :to => "home"
-  
-  #devise and omnioauth stuff for callback from Facebook
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -62,4 +56,14 @@ Libman::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+  #devise and omnioauth stuff for callback from Facebook
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  
+  
+  
+  #404 Errors, Keep it in last line
+  match '*path' => 'four_oh_fours#index'
+  
 end

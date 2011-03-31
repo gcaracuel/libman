@@ -7,6 +7,20 @@ gem 'rails', '3.0.5'
 
 gem 'sqlite3'
 
+#Devise authentication
+gem 'devise', '1.2.0'
+
+#Omniauth (Opengrpah protocol support)
+gem 'omniauth'
+#Facebook Opengraph support
+gem 'oa-oauth', :require => 'omniauth'
+#Twitter Opengraph support
+
+#Google Opengraph support
+gem 'oa-openid', :require => 'omniauth/openid'
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -20,8 +34,8 @@ gem 'sqlite3'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
