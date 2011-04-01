@@ -60,8 +60,12 @@ Libman::Application.routes.draw do
   #devise and omnioauth stuff for callback from Facebook
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  #Routing sign in @ domain.com/sign_in
+  devise_for :users do
+    get "sign_in", :to => "devise/sessions#new"
+  end
   
-  
+  #root :to => 'four_oh_fours#index'  
   
   #404 Errors, Keep it in last line
   match '*path' => 'four_oh_fours#index'

@@ -12,12 +12,10 @@ gem 'devise', '1.2.0'
 
 #Omniauth (Opengrpah protocol support)
 gem 'omniauth'
-#Facebook Opengraph support
-gem 'oa-oauth', :require => 'omniauth'
-#Twitter Opengraph support
-
-#Google Opengraph support
-gem 'oa-openid', :require => 'omniauth/openid'
+  #Facebook Opengraph support
+  gem 'oa-oauth', :require => 'omniauth'
+  #Google Opengraph support
+  gem 'oa-openid', :require => 'omniauth/openid'
 
 
 

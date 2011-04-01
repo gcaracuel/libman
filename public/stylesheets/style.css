@@ -22,6 +22,7 @@ color:#C8C8C3;
 font-family:"ff-dagny-web-pro-1","ff-dagny-web-pro-2", "Lucida Grande",Arial, Helvetica, sans-serif;
 font-size:12px;
 width:100%;
+/*background-image: url('../images/background.jpg');*/
 }
 :focus {
 outline-color:-moz-use-text-color;
@@ -158,7 +159,7 @@ margin:0 0 30px;
 }
 
 
-/*---------INDEX STYLES---------*/
+/*---------Aplication Layout Styles---------*/
 
 #bottom {
 -moz-background-clip:border;
@@ -177,7 +178,7 @@ background:#111418 none repeat scroll 0 0;
 font-size: 13px;
 font-style: normal;
 clear:both;
-padding:40px 0 0;
+padding:22px 0 0;
 width:100%;
 position: absolute;
 bottom: 0px;
@@ -193,7 +194,7 @@ display:block;
 font-size:13px;
 letter-spacing:0px;
 line-height: 1.5em;
-padding:18px 0px 18px 0px;
+padding:8px 0px 8px 0px;
 text-transform:none;
 width:100%;
 }
@@ -201,18 +202,181 @@ width:100%;
 color: #FFF;
 border-bottom: none;
 }
+
+/*--- Text Styles ---*/ 
+
 .quote {
 margin:0 0 15px;
 line-height: 1.5em;
 width:235px;
 }
 .source {
-font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2", Georgia,Times,serif;
+font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2",Georgia,Times,serif;
 font-style:italic;
 color: #FFFFCC;
 font-size: 11px;
 }
 
-#weekly {
-width:200px;
+.left {
+display:inline;
+float:left;
 }
+.right {
+display:inline;
+float:right;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:80%;
+}
+
+/* AÑADIDOS */
+/* article */
+.article h2{
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 40px;
+	color: #000;
+	margin: 0 0 17px;
+}
+.article h2 em{
+	font-style: italic;
+	color: #e39000;
+}
+.article h2 img{
+	float: none;
+	margin: 0;
+}
+.article img{
+	float: right;
+	margin: 6px 67px 0 41px;
+}
+.article-invert img{
+	float: left;
+	margin: -5px 37px 0 15px;
+}
+.article-invert h2{margin-bottom: 19px;}
+.article p{margin: 0 0 24px;}
+.article-invert p{margin: 0 0 16px;}
+.article{
+	font-size: 1.4em;
+	line-height: 1.7142em;
+	color: #686c70;
+	padding-bottom: 2px;
+}
+.article-invert{padding: 0 61px 10px 0;}
+.main-content .container{
+	margin: 0 0 -1px -27px;
+	border: none;
+	position: relative;
+	width: 984px;
+	background: #fafafa;
+	overflow: visible;
+	z-index: 1;
+}
+.main-content .container:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.main-content .container .inner{
+	padding-bottom: 0;
+	padding-left: 0;
+	overflow: visible;
+}
+.main-content .container .inner:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.main-content .container .inner-b{
+	width: 100%;
+	background: url(../images/divider-logos.gif) repeat-x 0 100%;
+	padding-bottom: 12px;
+	padding-left: 28px;
+	padding: 13px 0 23px;
+}
+.main-content .container .inner-b:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+.main-content .container span{
+	float: none;
+	display: block;
+	width: 679px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.2307em;
+	line-height: 1.3125em;
+	overflow: hidden;
+}
+.main-content .container span a{color: #1ca5ec;}
+.main-content .container .logos{
+	float: none;
+	margin: 16px 0 0 41px;
+	height:1%;
+	overflow: hidden;
+}
+.main-content .container .logo01 img{margin: 2px 65px 0 0;}
+.main-content .container .logo02 img{margin: 3px 80px 0 0;}
+.main-content .container .logo03 img{margin: 12px 94px 0 0;}
+.main-content .container .logo04 img{margin: 4px 76px 0 0;}
+.main-content .container .logo05 img{margin: 18px 57px 0 0;}
+/* twocolumns */
+.twocolumns{
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 29px 0 31px;
+	background: url(../images/bg-stripes.gif) repeat-y 742px 0;
+}
+.twocolumns h3{
+	font-size: 22px;
+	color: #000;
+	line-height: 22px;
+	margin: 0;
+}
+/* twocolumns content */
+.twocolumns .content{
+	float: left;
+	width: 742px;
+}
+.twocolumns .content ul{
+	margin: 26px 0 -16px;
+	padding: 0 9px 0 0;
+	list-style: none;
+	height:1%;
+	overflow: hidden;
+	font-size:1.4em;
+	line-height: 1.7142em;
+}
+.twocolumns .content li{
+	width: 100%;
+	overflow: hidden;
+	padding: 0 0 16px;
+}
+.twocolumns .content span{
+	float: left;
+	background: url(../images/bg-number.gif) no-repeat;
+	width: 44px;
+	height: 44px;
+	font-size: 31px;
+	line-height: 41px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	margin: 5px 37px 0 0;
+}
+
+
+/* FIN AÑADIDOS */
+
+
+
+
+
+
+

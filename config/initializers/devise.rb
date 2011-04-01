@@ -179,9 +179,6 @@ Devise.setup do |config|
   require 'openid/store/filesystem'
   config.omniauth :open_id, OpenID::Store::Filesystem.new('/tmp')
   
-  
-
-
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
