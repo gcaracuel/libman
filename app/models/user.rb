@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  
+  has_many :user_tokens
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -7,25 +10,34 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
-  #Omniauth's Facebook methods 
-  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
-    data = access_token['extra']['user_hash']
-    if user = User.find_by_email(data["email"])
-      user
-    else # Create an user with a stub password. 
-      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20]) 
+  #Omniauth's Methods 
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session[:omniauth]
+        user.user_tokens.build(:provider => data['provider'], :uid => data['uid'])
+      end
     end
   end
   
-  #Look for Facebook user's email
-  def self.new_with_session(params, session)
-    super.tap do |user|
-      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["user_hash"]
-        user.email = data["email"]
-      elsif data = session["devise.openid_data"] && session["devise.openid_data"]["extra"]["user_hash"]
-        user.email = data["email"]
-      end
+  def apply_omniauth(omniauth)
+    #add some info about the user
+    #self.name = omniauth['user_info']['name'] if name.blank?
+    #self.nickname = omniauth['user_info']['nickname'] if nickname.blank?
+    
+    unless omniauth['credentials'].blank?
+      user_tokens.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+      #user_tokens.build(:provider => omniauth['provider'], 
+      #                  :uid => omniauth['uid'],
+      #                  :token => omniauth['credentials']['token'], 
+      #                  :secret => omniauth['credentials']['secret'])
+    else
+      user_tokens.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
     end
+    #self.confirm!# unless user.email.blank?
+  end
+  
+  def password_required?
+    (user_tokens.empty? || !password.blank?) && super  
   end
     
 end

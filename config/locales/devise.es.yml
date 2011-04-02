@@ -34,6 +34,9 @@ es:
       link: "¿No has recibido las instrucciones de desbloqueo?"
       send_instructions: 'En unos minutos recibirás un email con las instrucciones de como desbloquear tu cuenta.'
       unlocked: 'Tu cuenta ha sido desbloqueada correctamente. Automaticamente se ha iniciado tu sesión'
+    omniauth_callbacks:
+      success: 'Has ingresado correctamente.'
+      failure: 'No se ha podido le ha podido autorizar porque: "%{reason}".'
     mailer:
       confirmation_instructions: 'Instrucciones de confirmación de tu cuenta'
       reset_password_instructions: 'Instrucciones para cambiar la contraseña de tu cuenta'

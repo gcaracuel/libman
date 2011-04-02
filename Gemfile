@@ -12,15 +12,18 @@ gem 'devise', '1.2.0'
 
 #Omniauth (Opengrpah protocol support)
 gem 'omniauth'
-  #Facebook Opengraph support
-  gem 'oa-oauth', :require => 'omniauth'
-  #Google Opengraph support
-  gem 'oa-openid', :require => 'omniauth/openid'
+#Facebook Opengraph support
+gem 'oa-oauth', :require => 'omniauth'
+#Google Opengraph support
+gem 'oa-openid', :require => 'omniauth/openid'
 
 
 
 # Use unicorn as the web server
 # gem 'unicorn'
+
+# Use Mongrel webserver for testing cause of OpenID problems in Webrick
+gem 'mongrel', '1.2.0.pre2'
 
 # Deploy with Capistrano
 # gem 'capistrano'

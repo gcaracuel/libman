@@ -54,7 +54,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "d579dbc1ae556f4af7a8ae2eed3f0fcf7dd12cf210e26cc143304d80c5bb6454f883105b1fb1a3d3e25d21bda6f0375196eac3b4b461027aee6f3a987949b475"
+  config.pepper = "439ecfc4b47fe22c733da4ac682d1a315d78f3f8a69307e61bad501978e8d5f1db516f1cc96f3a2fcf8f87f63e1860eb27be5208894bf2b5e9b91481febe52ab"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -172,12 +172,51 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  #Facebook
   config.omniauth :facebook, '101890666563578', '579463255a748cf9bbfd30120f0a879d'
-  
-  #OpenID
   require 'openid/store/filesystem'
-  config.omniauth :open_id, OpenID::Store::Filesystem.new('/tmp')
+  config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
+  
+  
+  #Support methods
+  require 'openid/store/nonce'
+  require 'openid/store/interface'
+  module OpenID
+    module Store
+      class Memcache < Interface
+        def use_nonce(server_url, timestamp, salt)
+          return false if (timestamp - Time.now.to_i).abs > Nonce.skew
+          ts = timestamp.to_s # base 10 seconds since epoch
+          nonce_key = key_prefix + 'N' + server_url + '|' + ts + '|' + salt
+          result = @cache_client.add(nonce_key, '', expiry(Nonce.skew + 5))
+
+          return result
+        end
+      end
+    end
+  end
+  
+  class Hash
+    def recursive_find_by_key(key)
+      # Create a stack of hashes to search through for the needle which
+      # is initially this hash
+      stack = [ self ]
+
+      # So long as there are more haystacks to search...
+      while (to_search = stack.pop)
+        # ...keep searching for this particular key...
+        to_search.each do |k, v|
+          # ...and return the corresponding value if it is found.
+          return v if (k == key)
+
+          # If this value can be recursively searched...
+          if (v.respond_to?(:recursive_find_by_key))
+            # ...push that on to the list of places to search.
+            stack << v
+          end
+        end
+      end
+    end
+  end
   
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
