@@ -4,7 +4,11 @@
   <title>Libman</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="Keywords" content="">    <!-- Terminar y hacerlo variable -->
+  
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Permanent+Marker|Cabin+Sketch:bold|Droid+Serif">
+
   <%= stylesheet_link_tag :all %>
+  
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
@@ -35,17 +39,21 @@
 </div>
 
 
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<div class="center"><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></div>
 
-<%= link_to 'GMail', user_omniauth_authorize_path(:google_apps) %>
+<div class="center"><%= link_to "Gmail", user_omniauth_authorize_path(:google_apps) %></div>
+
+<div class="spacer"></div>
+
 
 <%= yield %>
 
 
-<div id="bottom"></div>
+
+<div class="spacer"></div>
 <div id="footer">	
   <div class="wrapper">
-    <p class="copy">Copyright © 2011 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com">Contacto</a> | <a href="libman.heroku.com">Website</a> del proyecto | <span class="center">Desarrollado como PFC usando <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
+    <p class="copy">Copyright © 2011 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com">Contacto</a> | <a href="http://libman.heroku.com">Website</a> del proyecto | <span class="center">Desarrollado como PFC usando <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
   </div>
 </div>
 </div>

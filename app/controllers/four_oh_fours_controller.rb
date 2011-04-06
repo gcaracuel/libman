@@ -1,12 +1,10 @@
 class FourOhFoursController < ApplicationController
   
   #Redirects to 404.html for routes errors
-  def index
+  def error
     respond_to do |format|
-    format.html { render :file => "#{RAILS_ROOT}/public/404.html" , :status => "404 Not Found"}
-    #Without layouts:
-    #format.html { render :file => "#{RAILS_ROOT}/public/404.html" , :status => "404 Not Found", :layout => false }
-    format.all { render :nothing => true, :status => "404 Not Found" }
+      format.html { render "errors/error", :status => "404 Not Found"}
+      format.all {} #For any other kinds of requests do nothing, maybe it will be necessary to extend it with xml responses
     end
   end
   

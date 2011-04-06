@@ -57,6 +57,8 @@ Libman::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
+  root :to => 'four_oh_fours#error'  
+  
   #devise and omnioauth stuff for callback from Facebook
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -67,13 +69,9 @@ Libman::Application.routes.draw do
   #Routing sign out @ domain.com/logout
   devise_for :users do
     get "/logout", :to => "devise/sessions#new"
-  end
+  end  
   
   
-  root :to => 'four_oh_fours#index'  
-  
-  
-  
-  #404 Errors, Keep it in last line
-  match '*path' => 'four_oh_fours#index'
+  #If nothing else matched -> 404 Error *** Keep it in last line ***
+  match '*path' => 'four_oh_fours#error'
 end

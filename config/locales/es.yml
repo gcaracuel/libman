@@ -1,5 +1,9 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+es:
   hello: "Hola mundo"
+
+  errors:
+    404title: "La página solicitada no existe."
+    404reason: "Quizás haya escrito mal la dirección o la página ha sido borrada"
