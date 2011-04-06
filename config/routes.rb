@@ -1,4 +1,5 @@
 Libman::Application.routes.draw do
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,4 +56,22 @@ Libman::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+  root :to => 'four_oh_fours#error'  
+  
+  #devise and omnioauth stuff for callback from Facebook
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  #Routing sign in @ domain.com/login
+  devise_for :users do
+    get "/login", :to => "devise/sessions#new"
+  end
+  #Routing sign out @ domain.com/logout
+  devise_for :users do
+    get "/logout", :to => "devise/sessions#new"
+  end  
+  
+  
+  #If nothing else matched -> 404 Error *** Keep it in last line ***
+  match '*path' => 'four_oh_fours#error'
 end
