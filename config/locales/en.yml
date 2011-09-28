@@ -2,8 +2,28 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
-  
+  layout:
+    contact: "Contact"
+    website: "of the project"
+    railsCredits: "Degree project developed using"
+ 
+  navigation:
+    reservations: "Reservations"
+    reservationsSpan: "Shopping historial"
+    news: "News"
+    newsSpan: "Best Sellers"
+    contact: "Contact"
+    contactSpan: "About us"
+    login: "Login"
+    loginSpan: "Acces your account"
+    logout: "Logout"
+    logoutSpan: "Left your account"
+    
   errors:
-    404title: "The page you were looking for doesn't exist."
+    404title: "Oops! The page you were looking for doesn't exist."
     404reason: "You may have mistyped the address or the page may have moved."
+
+  actions:
+    signIn: "Sign in"
+    signUp: "Sign up"
+    forgotPassword: "Forgot your password?"

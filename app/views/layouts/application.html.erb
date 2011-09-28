@@ -5,26 +5,26 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="Keywords" content="">    <!-- Terminar y hacerlo variable -->
   
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Permanent+Marker|Cabin+Sketch:bold|Droid+Serif">
-
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Cabin+Sketch:bold|Droid+Serif">
   <%= stylesheet_link_tag :all %>
-  
-  <%= javascript_include_tag :defaults %>
+
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.js' , 'rails', 'application' %>
   <%= csrf_meta_tag %>
+    
 </head>
-<body>
+<body>  
 <div id="header">
 	<div class="wrapper">
 	 	<div id="nav" class="clear">
 		<ul>
-			<li><a href="">Reservas</a><br>
-			<span>Ver mis compras</span></li>
-			<li><a href="">Novedades</a><br>
-			<span>Best sellers</span></li>
-			<li><a href="">Condiciones</a><br>
-			<span>Formas de pago</span></li>
-			<li><a href="">Contacto</a><br>
-			<span>Quienes somos</span></li>
+    <li><a href=""><%= I18n.t "navigation.reservations"  %></a><br>
+			<span><%= I18n.t "navigation.reservationsSpan"  %></span></li>
+			<li><a href=""><%= I18n.t "navigation.news"  %></a><br>
+			<span><%= I18n.t "navigation.newsSpan"  %></span></li>
+			<li><a href=""><%= I18n.t "navigation.contact"  %></a><br>
+			<span><%= I18n.t "navigation.contactSpan"  %></span></li>
+      <li><a href=<%= if signed_in? ; "/logout" else "/login" end %>><%= if signed_in? ; I18n.t "navigation.logout" else I18n.t "navigation.login" end%></a><br>
+      <span><%= if signed_in? ; I18n.t "navigation.logoutSpan" else I18n.t "navigation.loginSpan" end%></span></li>
 		</ul>
 		</div>
 	</div>
@@ -38,25 +38,20 @@
   </div>
 </div>
 
-
-<div class="center"><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></div>
-
-<div class="center"><%= link_to "Gmail", user_omniauth_authorize_path(:google_apps) %></div>
-
 <div class="spacer"></div>
 
 
 <%= yield %>
 
 
-
 <div class="spacer"></div>
+
 <div id="footer">	
   <div class="wrapper">
-    <p class="copy">Copyright © 2011 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com">Contacto</a> | <a href="http://libman.heroku.com">Website</a> del proyecto | <span class="center">Desarrollado como PFC usando <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
+  <p class="copy">Copyright © 2011 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com"> <%= I18n.t "layout.contact"%></a> | <a href="http://libman.heroku.com">Website</a> <%= (I18n.t "layout.website")%> | <span class="center"><%= (I18n.t "layout.railsCredits")%> <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
   </div>
 </div>
 </div>
-			 	       
+
 </body>
 </html>

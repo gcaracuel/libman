@@ -36,8 +36,12 @@ es:
       unlocked: 'Tu cuenta ha sido desbloqueada correctamente. Automaticamente se ha iniciado tu sesión'
     omniauth_callbacks:
       success: 'Has ingresado correctamente.'
-      failure: 'No se ha podido le ha podido autorizar porque: "%{reason}".'
+      failure: 'No se ha podido le ha podido autorizar. Error: "%{reason}".'
     mailer:
       confirmation_instructions: 'Instrucciones de confirmación de tu cuenta'
       reset_password_instructions: 'Instrucciones para cambiar la contraseña de tu cuenta'
       unlock_instructions: 'Instrucciones de desbloqueo de tu cuenta'
+    links:
+      sign_in: 'Acceder'
+      sign_up: 'Registrese'
+      forgot_password: '¿Olvidó su contraseña?'

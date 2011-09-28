@@ -2,8 +2,29 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-  hello: "Hola mundo"
-
+  layout:
+    contact: "Contacto"
+    website: "del proyecto"
+    railsCredits: "Desarrollado como PFC usando"
+    
+  navigation:
+    reservations: "Reservas"
+    reservationsSpan: "Ver mis compras"
+    news: "Novedades"
+    newsSpan: "Best Sellers"
+    contact: "Contacto"
+    contactSpan: "Quienes somos"
+    login: "Login"
+    loginSpan: "Acceda a su cuenta"
+    logout: "Salir"
+    logoutSpan: "Abandonar su cuenta"
+  
   errors:
-    404title: "La página solicitada no existe."
+    404title: "Oops! La página solicitada no existe."
     404reason: "Quizás haya escrito mal la dirección o la página ha sido borrada"
+  
+  actions:
+    signIn: "Acceder"
+    signUp: "Registrarse"
+    forgotPassword: "¿Olvidó su contraseña?"
+      
