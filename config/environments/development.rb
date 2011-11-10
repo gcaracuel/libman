@@ -11,7 +11,7 @@ Libman::Application.configure do
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
-  config.action_view.debug_rjs             = true
+  # config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
@@ -25,6 +25,12 @@ Libman::Application.configure do
   
   #devise configuration
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Do not compress assets
+  config.assets.compress = false
+
+  # Expands the lines which load the assets
+  config.assets.debug = true
 
 end
 
