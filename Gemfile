@@ -7,9 +7,9 @@ gem "rails", "3.1.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
+	gem 'sass-rails', "~> 3.1.0"
+	gem 'coffee-rails', "~> 3.1.0"
+	gem 'uglifier'
 end
 
 gem 'jquery-rails'
@@ -17,11 +17,11 @@ gem 'jquery-rails'
 # Bundle for authentication system
 #Devise authentication
 gem 'devise', '1.4.7'
-#Omniauth (Opengrpah protocol support)
+#Omniauth (Opengraph protocol support)
 gem 'omniauth'
 #Facebook Opengraph support
 gem 'oa-oauth', :require => 'omniauth'
-#Google Opengraph support
+#Google Pass Opengraph support
 gem 'oa-openid', :require => 'omniauth/openid'
 
 # Use Mongrel webserver for testing cause of OpenID problems in Webrick
@@ -30,7 +30,6 @@ gem 'mongrel', '1.2.0.pre2'
 # Javascripts motors
 gem 'execjs'
 gem 'therubyracer'
-
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -46,6 +45,6 @@ gem 'therubyracer'
 #   gem 'webrat'
 # end
 group :development, :test do
-  gem 'sqlite3'
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+	gem 'sqlite3'
+	gem 'sqlite3-ruby', :require => 'sqlite3'
 end

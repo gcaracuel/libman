@@ -22,7 +22,7 @@ body {
   font-family: "Droid Sans", "Lucida Grande",Arial, Helvetica, sans-serif;
   font-size:12px;
   width:100%;
-  /*background-image: url('../images/background.jpg');*/
+  /*background-image: url('/assets/background.jpg');*/
 }
 :focus {
   outline-color:-moz-use-text-color;
@@ -80,7 +80,7 @@ ul, li {
 -moz-background-clip:border;
 -moz-background-inline-policy:continuous;
 -moz-background-origin:padding;
-  background:transparent url(../images/top.png) no-repeat scroll center top;
+  background:transparent url(/assets/top.png) no-repeat scroll center top;
   border-top:8px solid #181818;
   height:120px;
   width:100%;
@@ -90,7 +90,7 @@ ul, li {
 -moz-background-clip:border;
 -moz-background-inline-policy:continuous;
 -moz-background-origin:padding;
-  background:transparent url(../images/top_underline.jpg) no-repeat scroll center bottom;
+  background:transparent url(/assets/top_underline.jpg) no-repeat scroll center bottom;
   margin:0 auto;
   padding:55px 0px 10px 85px;
   width:720px;
@@ -119,7 +119,7 @@ ul, li {
 -moz-background-clip:border;
 -moz-background-inline-policy:continuous;
 -moz-background-origin:padding;
-  background:transparent url(./../images/perspective.png) repeat-x scroll center center;
+  background:transparent url(/assets/perspective.png) repeat-x scroll center center;
   color:#333333;
   font-family:"Droid Sans", Georgia,Times,serif;
   font-size:1.8em;
@@ -302,7 +302,7 @@ ul, li {
 }
 .main-content .container .inner-b{
 	width: 100%;
-	background: url(../images/divider-logos.gif) repeat-x 0 100%;
+	background: url(/assets/divider-logos.gif) repeat-x 0 100%;
 	padding-bottom: 12px;
 	padding-left: 28px;
 	padding: 13px 0 23px;
@@ -340,7 +340,7 @@ ul, li {
 	overflow: hidden;
 	padding: 0;
 	margin: 29px 0 31px;
-	background: url(../images/bg-stripes.gif) repeat-y 742px 0;
+	background: url(/assets/bg-stripes.gif) repeat-y 742px 0;
 }
 .twocolumns h3{
 	font-size: 22px;
@@ -369,7 +369,7 @@ ul, li {
 }
 .twocolumns .content span{
 	float: left;
-	background: url(../images/bg-number.gif) no-repeat;
+	background: url(/assets/bg-number.gif) no-repeat;
 	width: 44px;
 	height: 44px;
 	font-size: 31px;
