@@ -16,7 +16,7 @@ gem 'jquery-rails'
 
 # Bundle for authentication system
 #Devise authentication
-gem 'devise', '1.4.7'
+gem 'devise'
 #Omniauth (Opengraph protocol support)
 gem 'omniauth'
 #Facebook Opengraph support
@@ -43,7 +43,8 @@ gem 'therubyracer'
 # and rake tasks are available in development mode:
 # group :development, :test do
 #   gem 'webrat'
-# end
+# end  comentario
+
 group :development, :test do
 	gem 'sqlite3'
 	gem 'sqlite3-ruby', :require => 'sqlite3'
