@@ -22,8 +22,3 @@ en:
   errors:
     404title: "Oops! The page you were looking for doesn't exist."
     404reason: "You may have mistyped the address or the page may have moved."
-
-  actions:
-    signIn: "Sign in"
-    signUp: "Sign up"
-    forgotPassword: "Forgot your password?"

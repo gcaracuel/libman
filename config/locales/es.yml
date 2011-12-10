@@ -23,8 +23,3 @@ es:
     404title: "Oops! La página solicitada no existe."
     404reason: "Quizás haya escrito mal la dirección o la página ha sido borrada"
   
-  actions:
-    signIn: "Acceder"
-    signUp: "Registrarse"
-    forgotPassword: "¿Olvidó su contraseña?"
-      

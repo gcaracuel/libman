@@ -12,8 +12,6 @@ group :assets do
 	gem 'uglifier'
 end
 
-gem 'jquery-rails'
-
 # Bundle for authentication system
 #Devise authentication
 gem 'devise'
@@ -25,7 +23,9 @@ gem 'oa-oauth', :require => 'omniauth'
 gem 'oa-openid', :require => 'omniauth/openid'
 
 # Use Mongrel webserver for testing cause of OpenID problems in Webrick
-gem 'mongrel', '1.2.0.pre2'
+group :development, :test do
+	gem 'mongrel', '1.2.0.pre2'
+end
 
 # Javascripts motors
 gem 'execjs'
