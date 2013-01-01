@@ -1,5 +1,6 @@
-/*
+/* ...
 *= require_self
+*= require_tree .
 */
 
 /*---------MAIN STYLES---------*/
@@ -384,6 +385,11 @@ ul, li {
 
 
 
+
+
+
+
+
 /* Modal Window Stuff (Using CSS3 - Internet Explorer supports lacks exists) */
 .modal {
 
@@ -546,10 +552,3 @@ a.openModal:focus {
 background: -moz-linear-gradient(#fff, #ccc);
 background: -webkit-gradient(linear, right top, right bottom, from(rgb(255,255,255)), to(rgb(200,200,200)));
 } /* modal end */
-
-
-
-
-
-
-

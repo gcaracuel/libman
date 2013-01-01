@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  fecha_inicio: 2011-12-21
+  fecha_entrega: 2011-12-21
+  activo: false
+
+two:
+  user_id: 1
+  fecha_inicio: 2011-12-21
+  fecha_entrega: 2011-12-21
+  activo: false

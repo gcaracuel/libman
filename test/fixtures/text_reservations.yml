@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reservation_id: 1
+  nombre: MyString
+  apellido1: MyString
+  apellido2: MyString
+  cheque_libro: chequeLibro1
+
+two:
+  reservation_id: 2
+  nombre: MyString
+  apellido1: MyString
+  apellido2: MyString
+  cheque_libro: cheque2

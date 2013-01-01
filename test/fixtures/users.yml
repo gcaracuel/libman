@@ -4,8 +4,16 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+
+<% x = 0 %>
+
+pepe:
+  id: 1
+  email: pepe@hotmail.com
+  nombre: Pepe
+  apellido1: López
+  apellido2: Merchán
+  direccion: C/ de la piruleta s/n
+  telefono: 65113853
+  activo: true
+

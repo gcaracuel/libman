@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+<% x=0 %>
+
+anaya:
+  id: <%= x+=1 %>
+  nombre: Editorial Anaya
+  web: www.anaya.es
+  isbn: 97884667
+  activo: true

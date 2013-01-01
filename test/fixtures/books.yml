@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+  <% x = 0 %>
+
+lazarillo:
+  id: <%= x += 1 %>
+  editor_id: 1
+  author_id: 1
+  titulo: El lazarillo de Tormes
+  subtitulo: 
+  precio: 10.00
+  digital: false
+  num_edicion: 49
+  ean: 12345678910123
+  isbn: 12345678910123
+  fecha_publicacion: 1912-1-1
+  stock: 11
+  idioma: español
+  resumen: Es un pedazo de libro clásico que tiene una pelicula que está mejor.
+  situacion: disponible
+  iva: 4
+
+quijote:
+  id: <%= x += 1 %>
+  editor_id: 1
+  author_id: 1
+  titulo: El Quijote
+  subtitulo: 
+  precio: 12.50
+  digital: false
+  num_edicion: 72
+  ean: 12345678910124
+  isbn: 12345678910124
+  fecha_publicacion: 1912-5-7
+  stock: 11
+  idioma: español
+  resumen: Clasicazo traducido a todos los idiomas.
+  situacion: disponible
+  iva: 4

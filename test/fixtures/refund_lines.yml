@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  refund_id: 1
+  book_id: 1
+  cantidad: 1
+  precio: 1.5
+  iva: 1
+
+two:
+  refund_id: 1
+  book_id: 1
+  cantidad: 1
+  precio: 1.5
+  iva: 1

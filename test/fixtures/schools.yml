@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  cif: MyString
+  fax: MyString
+  web: MyString
+  active: false
+
+two:
+  user_id: 1
+  cif: MyString
+  fax: MyString
+  web: MyString
+  active: false

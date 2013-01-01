@@ -32,14 +32,16 @@ es:
       confirmed: 'Su cuenta ha sido confirmada. Ya ha accedido a su cuenta.'
     registrations:
       signed_up: '¡Bienvenido! Ha sido registrado correctamente.'
-      inactive_signed_up: 'Ha sido registrado correctamente. Sin embargo, no está conectado todavía porque su cuenta está %{reason}.'
+      signed_up_but_unconfirmed: 'Ha sido enviado un mensaje de confirmación al correo proporcionado. Por favor abra el enlace que le hemos enviado para confirmar su cuenta.'
+      signed_up_but_inactive: 'Ha sido registrado correctamente. Sin embargo, no está conectado todavía porque su cuenta no ha sido aún confirmada.'
+      signed_up_but_locked: 'Ha sido registrado correctamente. Sin embargo, no está conectado todavía porque su cuenta está bloqueada'
       updated: 'Ha actualizado su cuenta correctamente.'
       destroyed: '¡Hasta luego! Su cuenta ha sido cancelada. Esperamos verle pronto.'
     unlocks:
       send_instructions: 'Recibirá un email con instrucciones para desbloquear su cuenta en pocos minutos.'
       unlocked: 'Su cuenta ha sido desbloqueada. Ya ha accedido a su cuenta.'
       send_paranoid_instructions: 'Si su cuenta existe, recibirá un email con instrucciones para desbloquear su cuenta en pocos minutos.'
-    oauth_callbacks:
+    omniauth_callbacks:
       success: 'Conectado correctamente.'
       failure: 'No se le ha podido autorizar. Error: "%{reason}".'
     mailer:

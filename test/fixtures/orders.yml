@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  supplier_id: 1
+  numero: 1
+  fecha: 2011-12-21
+  activo: false
+
+two:
+  supplier_id: 1
+  numero: 1
+  fecha: 2011-12-21
+  activo: false
