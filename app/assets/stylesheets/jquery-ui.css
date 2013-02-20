@@ -867,7 +867,7 @@ body .ui-tooltip {
 /* Interaction Cues
 ----------------------------------*/
 .ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
+.ui-widget-content .ui-state-highlight,widget
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #cccccc;
 	background: #ffffff url(/assets/jqueryui/ui-bg_flat_55_ffffff_40x100.png) 50% 50% repeat-x;

@@ -241,6 +241,14 @@ ul, li {
   font-size: 16px;
 }
 
+
+
+
+
+
+
+
+
 /* AÑADIDOS */
 /* article */
 .article h2{
@@ -382,8 +390,6 @@ ul, li {
 
 
 
-
-
 /* book_finder */
 
 div #book_finder input[type="text"]{
@@ -436,9 +442,49 @@ div #book_finder input[type="submit"]{
     -webkit-box-shadow: 3px 3px 1px #999
 }
 
+/* Login screen */
 
+div #login_screen label{
+  font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 1px;
+    white-space: nowrap;
+    font-size: 12px;
+}
 
-/* FIN AÑADIDOS */
+.ui-widget #login_screen input{
+    display: inline-block;
+    width: 50%;
+    height: 20px;
+    background: transparent;
+    border: 1px solid;
+    border-color: #c8c3c3;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    white-space: nowrap;
+    color: #000000;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.ui-widget #login_screen input[type="submit"]{
+    display: inline-block;
+    width: 30%;
+    height: 24px;
+    background-color: #4782ac;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 12px;
+
+    -moz-box-shadow: 3px 3px 1px #999;
+    -webkit-box-shadow: 3px 3px 1px #999
+}
+
 
 
 
