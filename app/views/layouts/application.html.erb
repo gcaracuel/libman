@@ -6,7 +6,7 @@
   <meta name="Keywords" content="">    <!-- Terminar y hacerlo variable -->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Cabin+Sketch:bold|Droid+Serif">
   <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js' , 'rails', 'jquery.bxslider.min', 'application' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.js' , 'rails', 'jquery.bxslider.min', 'application' %>
   <%= csrf_meta_tag %>  
 </head>
 <body>  
@@ -14,14 +14,10 @@
 	<div class="wrapper">
 	 	<div id="nav" class="clear">
 		<ul>
-      <li><a href=""><%= I18n.t "navigation.reservations"  %></a><br>
-			<span><%= I18n.t "navigation.reservationsSpan"  %></span></li>
-			<li><a href=""><%= I18n.t "navigation.news"  %></a><br>
-			<span><%= I18n.t "navigation.newsSpan"  %></span></li>
-			<li><a href=""><%= I18n.t "navigation.contact"  %></a><br>
-			<span><%= I18n.t "navigation.contactSpan"  %></span></li>
-      <li><a href=<%= if signed_in? ; "/logout" else "/login" end %>><%= if signed_in? ; I18n.t "navigation.logout" else I18n.t "navigation.login" end%></a><br>
-      <span><%= if signed_in? ; I18n.t "navigation.logoutSpan" else I18n.t "navigation.loginSpan" end%></span></li>
+                 <li><a href=""><%= I18n.t "navigation.reservations"  %></a><br><span><%= I18n.t "navigation.reservationsSpan"  %></span></li>
+			<li><a href=""><%= I18n.t "navigation.news"  %></a><br><span><%= I18n.t "navigation.newsSpan"  %></span></li>
+			<li><a href=""><%= I18n.t "navigation.contact"  %></a><br><span><%= I18n.t "navigation.contactSpan"  %></span></li>
+                 <li><a href=<%= if signed_in? ; "/logout" else "/login" end %>><%= if signed_in? ; I18n.t "navigation.logout" else I18n.t "navigation.login" end%></a><br><span><%= if signed_in? ; I18n.t "navigation.logoutSpan" else I18n.t "navigation.loginSpan" end%></span></li>
 		</ul>
 		</div>
 	</div>
@@ -39,7 +35,7 @@
 <div class="spacer"></div>
 <div id="footer">	
   <div class="wrapper">
-  <p class="copy">Copyright © 2011 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com"> <%= I18n.t "layout.contact"%></a> | <a href="http://libman.heroku.com">Website</a> <%= (I18n.t "layout.website")%> | <span class="center"><%= (I18n.t "layout.railsCredits")%> <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
+  <p class="copy">Copyright © 2013 Guillermo Caracuel | <a href="mailto:gcaracuel@gmail.com"> <%= I18n.t "layout.contact"%></a> | <a href="http://libman.heroku.com">Website</a> <%= (I18n.t "layout.website")%> | <span class="center"><%= (I18n.t "layout.railsCredits")%> <a href="http://rubyonrails.org/">Ruby on Rails</a></span></p>
   </div>
 </div>
 </div>

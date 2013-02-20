@@ -6,7 +6,7 @@ gem "activesupport"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "rails", "3.2.8", :require => 'rack'
+gem "rails", "3.2.12", :require => 'rack'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -51,6 +51,6 @@ gem 'therubyracer'
 # end  comentario
 
 group :development, :test do
-	gem 'sqlite3', "~> 1.3.6"
+	gem 'sqlite3', "~> 1.3.7"
 	gem 'sqlite3-ruby', :require => 'sqlite3'
 end

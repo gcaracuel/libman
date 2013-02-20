@@ -381,6 +381,63 @@ ul, li {
 }
 
 
+
+
+
+/* book_finder */
+
+div #book_finder input[type="text"]{
+    display: inline-block;
+    width: 40%;
+    height: 20px;
+    background: transparent;
+    background-image: url(/assets/lupa.png); 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px 15px;
+    border: 3px solid;
+    border-color: #c8c3c3;
+    border-radius: 8px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 20px;
+    white-space: nowrap;
+    color: #c8c8c3;
+    font-size: 14px;
+}
+
+div #book_finder select{
+    border: 3px solid;
+    border-color: #c8c3c3;
+    border-radius: 5px;
+    background: transparent;
+    height: 24px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: "Droid Sans", Georgia,Times,serif;
+}
+
+div #book_finder input[type="submit"]{
+    display: inline-block;
+    height: 24px;
+    background-color: #4782ac;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 14px;
+
+    -moz-box-shadow: 3px 3px 1px #999;
+    -webkit-box-shadow: 3px 3px 1px #999
+}
+
+
+
 /* FIN AÑADIDOS */
 
 

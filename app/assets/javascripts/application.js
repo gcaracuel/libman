@@ -13,9 +13,11 @@ $(document).ready(function(){
    $("div#dialog h2").remove();
 });
 
+
 //Bestsellers slides (use id="bestseller_slides")
 $(document).ready(function(){
     $('#bestsellers_slides').bxSlider({
+       mode: 'horizontal',
        randomStart: true,
        minSlides: 1,
        maxSlides: 10,
@@ -23,7 +25,7 @@ $(document).ready(function(){
        slideWidth: 100,
        slideMargin: 10,
        pager: false,
-       controls: false,
+       controls: true,
        auto: true
     });    
   });
