@@ -197,28 +197,36 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  config.omniauth :facebook, '101890666563578', '579463255a748cf9bbfd30120f0a879d'
-  require 'openid/store/filesystem'
-  config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
   
+  config.omniauth :facebook, '101890666563578', '579463255a748cf9bbfd30120f0a879d'
+  
+  require 'openid/store/filesystem'
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :require => 'omniauth-openid'
+
+  #.# Google Apps ha dejado de funcionar   (Pendiente de borrar hasta #.#)
+
+  #require 'openid/store/filesystem'
+  #config.omniauth :google_apps, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com'
   
   #Support methods
-  require 'openid/store/nonce'
-  require 'openid/store/interface'
-  module OpenID
-    module Store
-      class Memcache < Interface
-        def use_nonce(server_url, timestamp, salt)
-          return false if (timestamp - Time.now.to_i).abs > Nonce.skew
-          ts = timestamp.to_s # base 10 seconds since epoch
-          nonce_key = key_prefix + 'N' + server_url + '|' + ts + '|' + salt
-          result = @cache_client.add(nonce_key, '', expiry(Nonce.skew + 5))
+  #require 'openid/store/nonce'
+  #require 'openid/store/interface'
+  #module OpenID
+    #module Store
+     # class Memcache < Interface
+       # def use_nonce(server_url, timestamp, salt)
+        #  return false if (timestamp - Time.now.to_i).abs > Nonce.skew
+          #ts = timestamp.to_s # base 10 seconds since epoch
+          #nonce_key = key_prefix + 'N' + server_url + '|' + ts + '|' + salt
+          #result = @cache_client.add(nonce_key, '', expiry(Nonce.skew + 5))
 
-          return result
-        end
-      end
-    end
-  end
+          #return result
+        #end
+      #end
+    #end
+  #end
+
+  #.#
   
   class Hash
     def recursive_find_by_key(key)

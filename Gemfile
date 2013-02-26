@@ -1,28 +1,33 @@
 source 'http://rubygems.org'
 
+gem 'rack'
+
+gem "activesupport"
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "rails", "3.1.0"
+gem "rails", "3.2.12", :require => 'rack'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'sass-rails', "~> 3.1.0"
-	gem 'coffee-rails', "~> 3.1.0"
+	gem 'sass-rails'
+	gem 'coffee-rails'
 	gem 'uglifier'
 end
 
 # Bundle for authentication system
+
 #Devise authentication
 gem 'devise'
 #Omniauth (Opengraph protocol support)
+gem 'oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-openid'
 gem 'omniauth'
-#Facebook Opengraph support
-gem 'oa-oauth', :require => 'omniauth'
-#Google Pass Opengraph support
-gem 'oa-openid', :require => 'omniauth/openid'
 
 # Use Mongrel webserver for testing cause of OpenID problems in Webrick
+# rails server mongrel
 group :development, :test do
 	gem 'mongrel', '1.2.0.pre2'
 end
@@ -46,6 +51,6 @@ gem 'therubyracer'
 # end  comentario
 
 group :development, :test do
-	gem 'sqlite3'
+	gem 'sqlite3', "~> 1.3.7"
 	gem 'sqlite3-ruby', :require => 'sqlite3'
 end

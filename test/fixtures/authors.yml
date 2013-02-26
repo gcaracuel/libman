@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+# rake db:fixtures:load
+
+
+anonimo:
+  nombre: Anónimo
+  apellido1: Apellido
+  apellido2: Apellido

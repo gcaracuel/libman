@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  book_id: 1
+  basket_id: 1
+  cantidad: 1
+
+two:
+  book_id: 1
+  basket_id: 1
+  cantidad: 1

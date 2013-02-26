@@ -7,7 +7,19 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
+  
+  belongs_to :comment
   has_many :user_tokens
+  has_many :reservations
+  has_many :images, :as => :imageable
+  has_one :school
+  has_one :basket
+
+
+  # Se necesita configurar de alguna manera las cuentas vinculadas y la ventana de registro para hacer necesarios la siguiente validacion, p.e pedir estos datos siempre antes de poder finalizar una compra.
+  #validates :nombre, :apellido1, :telefono, :activo, :presence => true
+  validates :email, :format => {:with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ , :message => "email format not valid" }
+  
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

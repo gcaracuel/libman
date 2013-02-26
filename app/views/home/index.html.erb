@@ -1,5 +1,16 @@
-<div class="center">
-  <div class="article">
-    <h2>aquí va el index</h2> 
+  <!-- Carrusel de bestsellers -->
+  
+  <div align="center">
+  <div style="width:50%">
+  <div id="book_finder">
+  	<%= render :partial => "book_finder" %>
   </div>
-</div>
+  <div class="spacer"></div>
+  <div id="bestsellers_slides">
+ 	<!-- <%= render :partial => "slide_bestseller"  %> -->
+ 	<%= render :partial => "slide_bestseller", :collection => @bestsellers %>
+  </div>
+  </div>
+  </div>
+
+  <!-- Carrusel de bestsellers -->

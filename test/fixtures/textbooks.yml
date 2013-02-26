@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  book_id: 1
+  materia: MyString
+  tipo: MyString
+
+two:
+  book_id: 1
+  materia: MyString
+  tipo: MyString

@@ -1,5 +1,6 @@
-/*
+/* ...
 *= require_self
+*= require_tree .
 */
 
 /*---------MAIN STYLES---------*/
@@ -240,6 +241,14 @@ ul, li {
   font-size: 16px;
 }
 
+
+
+
+
+
+
+
+
 /* AÑADIDOS */
 /* article */
 .article h2{
@@ -380,7 +389,107 @@ ul, li {
 }
 
 
-/* FIN AÑADIDOS */
+
+/* book_finder */
+
+div #book_finder input[type="text"]{
+    display: inline-block;
+    width: 40%;
+    height: 20px;
+    background: transparent;
+    background-image: url(/assets/lupa.png); 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px 15px;
+    border: 3px solid;
+    border-color: #c8c3c3;
+    border-radius: 8px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 20px;
+    white-space: nowrap;
+    color: #c8c8c3;
+    font-size: 14px;
+}
+
+div #book_finder select{
+    border: 3px solid;
+    border-color: #c8c3c3;
+    border-radius: 5px;
+    background: transparent;
+    height: 24px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: "Droid Sans", Georgia,Times,serif;
+}
+
+div #book_finder input[type="submit"]{
+    display: inline-block;
+    height: 24px;
+    background-color: #4782ac;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 14px;
+
+    -moz-box-shadow: 3px 3px 1px #999;
+    -webkit-box-shadow: 3px 3px 1px #999
+}
+
+/* Login screen */
+
+div #login_screen label{
+  font-family: "Droid Sans", Georgia,Times,serif;
+    padding-left: 1px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.ui-widget #login_screen input{
+    display: inline-block;
+    width: 50%;
+    height: 20px;
+    background: transparent;
+    border: 1px solid;
+    border-color: #c8c3c3;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    white-space: nowrap;
+    color: #000000;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.ui-widget #login_screen input[type="submit"]{
+    display: inline-block;
+    width: 30%;
+    height: 24px;
+    background-color: #4782ac;
+    border: 2px solid;
+    border-color: #000000;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-family: "Droid Sans", Georgia,Times,serif;
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: 12px;
+
+    -moz-box-shadow: 3px 3px 1px #999;
+    -webkit-box-shadow: 3px 3px 1px #999
+}
+
+
+
+
+
+
 
 
 
@@ -546,10 +655,3 @@ a.openModal:focus {
 background: -moz-linear-gradient(#fff, #ccc);
 background: -webkit-gradient(linear, right top, right bottom, from(rgb(255,255,255)), to(rgb(200,200,200)));
 } /* modal end */
-
-
-
-
-
-
-

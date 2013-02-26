@@ -19,7 +19,13 @@
 <% end -%>
 
 <div class="center">
+<<<<<<< HEAD
 <%= link_to(image_tag("facebook.png"), user_omniauth_authorize_path(:facebook)) %>
 &nbsp
 <%= link_to(image_tag("google.png"), user_omniauth_authorize_path(:google_apps)) %>
+=======
+<%# <%= link_to(image_tag("google.gif"), user_omniauth_authorize_path(:google_apps)) %>
+<%= link_to(image_tag("google.gif"), user_omniauth_authorize_path(:open_id, :openid_url => "http://www.google.com/accounts/o8/id")) %>
+<%= link_to(image_tag("facebook.gif"), user_omniauth_authorize_path(:facebook)) %>
+>>>>>>> feature/bbdd
 </div>

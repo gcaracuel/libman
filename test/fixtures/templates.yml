@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  course_id: 1
+  school_id: 1
+  curso_lectivo: MyString
+
+two:
+  course_id: 1
+  school_id: 1
+  curso_lectivo: MyString

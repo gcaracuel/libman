@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  textbook_id: 1
+  textReservation_id: 1
+  cantidad: 1
+  course_id: 1
+
+two:
+  textbook_id: 2
+  textReservation_id: 1
+  cantidad: 1
+  course_id: 1
